@@ -1,0 +1,781 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+      
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Montserrat',sans-serif;
+
+}
+
+:root{
+    --primary-color:#fff;
+    --primary-shade:#f7f5f2;
+    --secondary-color:#000;
+    --secondary-shade:#4b4c4c;
+    --red-color:#d40700;
+    --red-shade:#b20600;
+    --accent-color:#d40700;
+}
+
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/*header section*/
+header{
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2,0,36,1)0% , rgba(50,50,51,1)
+    35%, rgba(0,212,255,1)100%);
+    background: linear-gradient(to right,#040404,#242424,#656565);
+    color:var(--primary-color)
+}
+.nav-bar{
+    padding: 30px 0;
+}
+span{
+    color:var(--red-color);
+}
+
+ul li a{
+    margin:0 10px;
+    padding: 0 5px;
+    color:var(--accent-color);
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li a::before{
+    content: '';
+    width: 0;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: 0.6s ease;
+}
+ul li a:hover::before{
+    width:100%
+}
+
+/*button*/
+
+.btn{
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: var(--red-color);
+    color: var(--primary-color);
+    outline: none;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+    padding: 0 5px;
+    font-weight: 500;
+}
+
+.btn:hover{
+    background-color: var(--red-shade);
+    color: var(--primary-shade);
+    border:2px solid var(--red-color);
+}
+
+
+
+
+
+
+
+.content{
+    height: 90vh;
+    position: relative;
+}
+
+.right img{
+      width:40%;
+      float: inline-start;
+      position: relative;
+      z-index: 999;
+      cursor: pointer;
+}
+.right img:hover{
+    filter:drop-shadow(16px 5px 20px burlywood)
+}
+h4,p{
+    font-family: 'Poppins',sans-serif;
+}
+
+.color-box{
+    width: 560px;
+    height: 480px;
+    border: 5px solid red;
+    transform: rotate(60deg);
+    position:absolute;
+    top: 120px;
+    right: 10px;
+}
+/*about design*/
+.about-us {
+  background-color: #f1f1f1;
+  padding: 40px;
+  text-align: center;
+}
+
+.about-us h1 {
+  color: white;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about-us h2 {
+  color: #ff6f00;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.about-us p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.about-us .content {
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.about-us .content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.about-us .content:hover::before {
+  opacity: 1;
+}
+
+.about-us .content:hover p,
+.about-us .content:hover h2 {
+  color:black;
+}
+
+.about-us .content:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.about-us footer {
+  margin-top: 40px;
+}
+
+.about-us footer img {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  filter: brightness(100%);
+  transition: all 0.3s ease-in-out;
+}
+
+.about-us footer img:hover {
+  transform: rotate(360deg) scale(1.2);
+  filter: brightness(150%);
+}
+
+.about-us footer img:first-child {
+  filter: grayscale(100%);
+}
+
+.about-us footer img:last-child {
+  filter: sepia(100%) saturate(200%);
+}
+
+.about-us footer img:nth-child(3) {
+  filter: invert(30%);
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px 2px rgba(255, 0, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 5px 2px rgba(255, 0, 0, 0.7);
+  }
+}
+
+.about-us footer img:nth-child(4) {
+  animation: glow 1.5s infinite;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.about-us footer img:last-child {
+  animation: flicker 1s infinite;
+}
+
+  /*navigation*/
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+    z-index: 9999;
+  }
+  /* Styles for navigation pages */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+
+  /*portfolio*/
+  .portfolio {
+    background-color: #f9f9f9;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .portfolio h1 {
+    color:white;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .portfolio h2 {
+    color: #ff6f00;
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .portfolio .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .portfolio .skills-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+  }
+  
+  .portfolio .skills-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .portfolio .skills-box li {
+    background-color: #ff6f00;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 20px;
+  }
+  
+  .portfolio .profile-box {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .portfolio .profile-box a {
+    text-decoration: none;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .portfolio .profile-box a:hover {
+    color: #ff6f00;
+  }
+  
+  .portfolio .profile-box .profile-icon {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .portfolio .profile-box .profile-icon img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .portfolio .profile-box .profile-icon::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(255, 111, 0, 0.3);
+    z-index: -1;
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .portfolio .profile-box .profile-icon:hover {
+    transform: rotate(360deg) scale(1.2);
+  }
+  
+  .portfolio .profile-box .profile-icon:hover::before {
+    transform: scale(1);
+  }
+  /*achievements*/
+  @keyframes shower {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .achievements {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .achievements h1 {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .achievements .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .achievements .achievement {
+    width: 300px;
+    margin: 20px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .achievements .achievement img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .achievements .achievement .achievement-details {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .achievements .achievement:hover .achievement-details {
+    opacity: 1;
+  }
+  
+  .achievements .achievement h2 {
+    font-size: 24px;
+    margin-top: 0;
+  }
+  
+  .achievements .achievement p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .achievements .ribbon {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 30px;
+    background-color: #ff6f00;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 5px;
+    opacity: 0;
+    animation: shower 0.5s forwards;
+  }
+  
+  .achievements .achievement:hover .ribbon {
+    opacity: 1;
+  }
+  
+  .achievements .ribbon::before,
+  .achievements .ribbon::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+  }
+  
+  .achievements .ribbon::before {
+    border-bottom-color: #ff6f00;
+    top: -30px;
+  }
+  
+  .achievements .ribbon::after {
+    border-top-color: #ff6f00;
+    bottom: -30px;
+  }
+  
+  .achievements .achievement:hover .ribbon::before,
+  .achievements .achievement:hover .ribbon::after {
+    width: 40px;
+  }
+  
+  
+    
+    
+   
+  /*contacts page*/
+  /* Styles for the contacts page */
+/* Styles for the contacts page */
+/* Styles for the contacts page */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  #contact-info, #contact-form {
+    margin-bottom: 40px;
+  }
+  
+  #contact-info h2, #contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  #contact-info p {
+    margin-bottom: 10px;
+  }
+  
+  #contact-form form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  #contact-form label {
+    font-weight: bold;
+  }
+  
+  #contact-form input[type="text"],
+  #contact-form input[type="email"],
+  #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  #contact-form textarea {
+    resize: vertical;
+  }
+  
+  #contact-form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #contact-form input[type="submit"]:hover {
+    background-color: #666;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Color and animation effects */
+  
+  header {
+    transition: background-color 0.3s ease;
+  }
+  
+  #contact-info p {
+    color: #888;
+  }
+  
+  #contact-form input[type="text"]:focus,
+  #contact-form input[type="email"]:focus,
+  #contact-form textarea:focus {
+    border-color: #666;
+  }
+  
+  #contact-form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  #contact-form input[type="submit"]:hover {
+    background-color: #666;
+  }
+  
+  #contact-form input[type="submit"]:active {
+    background-color: #444;
+    transform: scale(0.95);
+  }
+  
+  @keyframes slide-in {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  #contact-info h2,
+  #contact-form h2 {
+    animation: slide-in 0.5s ease;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  #contact-info p,
+  #contact-form form {
+    animation: fade-in 0.5s ease;
+  }
+  /*achievements page*/
+  .achievements {
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 40px;
+  }
+  
+  header {
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  
+  .achievement {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  
+  .achievement img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .achievement-details {
+    text-align: center;
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  
+  p {
+    margin: 10px 0;
+  }
+  /*contacts page*/
+  /* Styling for contact info section */
+#contact-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#contact-info h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#contact-info p {
+  margin: 5px 0;
+}
+
+#contact-info a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Styling for contact form section */
+#contact-form {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#contact-form h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#contact-form form {
+  display: inline-block;
+  text-align: left;
+}
+
+#contact-form label {
+  display: block;
+  margin-top: 10px;
+  color: #333;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+#contact-form textarea {
+  resize: vertical;
+}
+
+#contact-form input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#contact-form input[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* Additional creative styling */
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea,
+#contact-form input[type="submit"] {
+  transition: all 0.3s ease;
+}
+
+#contact-form input[type="text"]:focus,
+#contact-form input[type="email"]:focus,
+#contact-form textarea:focus {
+  border-color: #333;
+  box-shadow: 0 0 5px #333;
+}
+
+#contact-form input[type="submit"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #333;
+}
